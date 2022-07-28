@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <style>
+        /*Background*/
+        body{
+            margin: 0;
+            background-color: #1527cb;
+            font-family: monospace;
+        }
+        
+        section{
+            display: flex;
+            justify-content: center;
+        }
+
+
+        /*Janela de Registro*/
+        .register{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            width: 350px;
+            border-radius: 20px;
+            margin: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 15px rgb(20, 0, 131);
+            padding: 20px 0;
+        }
+
+        .register:hover{
+            transition: 0.5s;
+            box-shadow: 0 0 25px #0e005f;
+        }
+
+
+        /*Título*/
+        .title h2{
+            color: #2f38bf;
+            font-size: 30px;
+        }
+
+        /*Alinhamento do formulário*/
+        .Form{
+            display: flex;
+            align-items: center;
+            margin: 15px;
+            flex-direction: column;
+            
+        }
+        /*Customização*/
+        .Form label{
+            margin-right: 10px;
+            color: #2f38bf;
+            margin-bottom: 5px;
+        }
+
+        .Form input{
+            width: 200px;
+            border: 1px solid rgb(212, 212, 212);
+        }
+
+
+        .Form input:hover{
+            transition: 0.4s;
+            width: 230px;
+            border: 2px solid #1527cb;
+        }
+
+        input{
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        textarea{
+            border: none;
+            border-radius: 15px;
+            padding: 10px;
+            border: 1px solid rgb(212, 212, 212);
+            outline: none;
+        }
+
+        textarea:hover{
+            border: 2px solid #1527cb;
+        }
+
+        select{
+            border: none;
+            padding: 7px;
+            width: 200px;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 9px;
+            outline: none;
+        }
+
+        select{
+            color: gray;
+        }
+
+        select:hover{
+            transition: 0.4s;
+            width: 230px;
+            border: 2px solid #1527cb;
+        }
+
+        .userNewsEmail{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .userNewsEmail p{
+            color: rgb(78, 78, 78);
+        }
+
+        .options label{
+            color: #1527cb;
+        }
+
+        
+        /*Botão Submit*/
+        .button button{
+            width: 200px;
+            height: 35px;
+            border: 2px solid #1527cb;
+            background-color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #2f38bf;
+        }
+
+        .button button:hover{
+            transition: 0.5s;
+            background-color: #1527cb;
+            color: white;
+            width: 230px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <form class="register">
+
+            <header class="title">
+                <h2>Registro</h2>
+                <hr>
+            </header>
+
+            <div class="userName Form"> <!-- Nome do Usuário -->
+                <label for="name">Nome</label>
+                <input type="text" name="nome" id="name" placeholder="Digite seu nome aqui..." maxlength="40" required>
+            </div>
+
+            <div class="userEmail Form"> <!-- E-mail do Usuário -->
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Digite seu email aqui..." maxlength="25" required>
+            </div>
+
+            <div class="userDescription Form"> <!-- Descrição do Usuário -->
+                <label for="description">Descrição</label>
+                <textarea name="descricao" id="description" cols="25" rows="5" placeholder="Fale mais sobre você aqui..." required></textarea>
+            </div>
+
+            <div class="userModule Form"> <!-- Seleção de Módulo -->
+                <label for="module"></label>
+                <select name="opcao" id="module" required>
+                    <option value="">Escolha o módulo</option>
+                    <option value="modulo1">Módulo 1</option>
+                    <option value="modulo2">Módulo 2</option>
+                    <option value="modulo3">Módulo 3</option>
+                </select>
+            </div>
+
+            <div class="userPassword Form"> <!-- Senha do Usuário -->
+                <label for="password">Senha</label>
+                <input type="password" id="password" maxlength="20" placeholder="Digite sua Senha..." name="senha" required>
+            </div>
+
+            <div class="userPConfirmation Form"> <!-- Confirmação da Senha -->
+                <label for="passwordConfirm">Confirmar Senha</label>
+                <input type="password" id="passwordConfirm" maxlength="20" placeholder="Digite sua senha novamente aqui..." name="confirmacaoSenha" required>
+            </div>
+
+            <div class="userNewsEmail">
+                <p>Deseja receber novidades em<br>seu e-mail?</p>
+                <div class="options">
+                    <label for="yes">Sim</label>
+                    <input type="radio" value="sim" name="novidades" id="yes" >
+                    <label for="no">Não</label>
+                    <input type="radio" value="não" name="novidades" id="no" >
+                </div>
+            </div>
+
+            <footer class="button">
+                <button type="submit">Cadastrar</button>
+                <hr>
+            </footer>
+        </form>
+
+    </section>
+</body>
+</html>
