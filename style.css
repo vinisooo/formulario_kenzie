@@ -1,0 +1,136 @@
+/*Background*/
+body{
+    margin: 0;
+    background-color: #1527cb;
+    font-family: monospace;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Janela de Registro*/
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    width: 350px;
+    border-radius: 20px;
+    margin: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 15px rgb(20, 0, 131);
+    padding: 20px 0;
+}
+
+.register:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 25px #0e005f;
+}
+
+
+/*Título*/
+.title h2{
+    color: #2f38bf;
+    font-size: 30px;
+}
+
+/*Alinhamento do formulário*/
+.Form{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    flex-direction: column;
+    
+}
+/*Customização*/
+.Form label{
+    margin-right: 10px;
+    color: #2f38bf;
+    margin-bottom: 5px;
+}
+
+.Form input{
+    width: 200px;
+    border: 1px solid rgb(212, 212, 212);
+}
+
+
+.Form input:hover{
+    transition: 0.4s;
+    width: 230px;
+    border: 2px solid #1527cb;
+}
+
+input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+textarea{
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid rgb(212, 212, 212);
+    outline: none;
+}
+
+textarea:hover{
+    border: 2px solid #1527cb;
+}
+
+select{
+    border: none;
+    padding: 7px;
+    width: 220px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 9px;
+    outline: none;
+}
+
+select{
+    color: gray;
+}
+
+select:hover{
+    transition: 0.4s;
+    width: 250px;
+    border: 2px solid #1527cb;
+}
+
+.userNewsEmail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.userNewsEmail p{
+    color: rgb(78, 78, 78);
+}
+
+.options label{
+    color: #1527cb;
+}
+
+
+/*Botão Submit*/
+.button button{
+    width: 200px;
+    height: 35px;
+    border: 2px solid #1527cb;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2f38bf;
+}
+
+.button button:hover{
+    transition: 0.5s;
+    background-color: #1527cb;
+    color: white;
+    width: 230px;
